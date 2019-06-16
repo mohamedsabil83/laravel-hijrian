@@ -17,6 +17,8 @@ composer require mohamedsabil83/laravel-hijrian
 
 ## Usage
 
+> Don't forget to add **`use Hijrian;`** at the top of your file.
+
 ### Get Hijri date
 
 ```php
