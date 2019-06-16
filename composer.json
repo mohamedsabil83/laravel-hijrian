@@ -1,0 +1,43 @@
+{
+    "name": "mohamedsabil83/laravelhijrian",
+    "description": ":description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamed Sabil",
+            "email": "me@mohamedsabil83.com",
+            "homepage": "https://mohamedsabil83.com"
+        }
+    ],
+    "homepage": "https://github.com/mohamedsabil83/laravelhijrian",
+    "keywords": ["Laravel", "LaravelHijrian"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mohamedsabil83\\LaravelHijrian\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mohamedsabil83\\LaravelHijrian\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mohamedsabil83\\LaravelHijrian\\LaravelHijrianServiceProvider"
+            ],
+            "aliases": {
+                "LaravelHijrian": "Mohamedsabil83\\LaravelHijrian\\Facades\\LaravelHijrian"
+            }
+        }
+    }
+}
