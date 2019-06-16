@@ -1,10 +1,10 @@
 <?php
 
-namespace Mohamedsabil83\LaravelHijrian\Facades;
+namespace Mohamedsabil83\LaravelHijrian;
 
 use Illuminate\Support\Facades\Facade;
 
-class LaravelHijrian extends Facade
+class LaravelHijrianFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class LaravelHijrian extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravelhijrian';
+        return LaravelHijrian::class;
     }
 }

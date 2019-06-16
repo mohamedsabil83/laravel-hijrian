@@ -1,28 +1,36 @@
 {
-    "name": "mohamedsabil83/laravelhijrian",
-    "description": ":description",
+    "name": "mohamedsabil83/laravel-hijrian",
+    "description": "Hijri-Gregorian date converter for Laravel",
+    "keywords": [
+        "laravel",
+        "hijrian",
+        "Hijri",
+        "Gregorian",
+        "date",
+        "converter"
+    ],
+    "homepage": "https://github.com/mohamedsabil83/laravel-hijrian",
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
             "name": "Mohamed Sabil",
             "email": "me@mohamedsabil83.com",
-            "homepage": "https://mohamedsabil83.com"
+            "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/mohamedsabil83/laravelhijrian",
-    "keywords": ["Laravel", "LaravelHijrian"],
     "require": {
-        "illuminate/support": "~5"
+        "php": "^7.1",
+        "illuminate/support": "^5.0",
+        "nesbot/carbon": "^2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~7.0",
-        "mockery/mockery": "^1.1",
-        "orchestra/testbench": "~3.0",
-        "sempro/phpunit-pretty-print": "^1.0"
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
     },
     "autoload": {
         "psr-4": {
-            "Mohamedsabil83\\LaravelHijrian\\": "src/"
+            "Mohamedsabil83\\LaravelHijrian\\": "src"
         }
     },
     "autoload-dev": {
@@ -30,13 +38,21 @@
             "Mohamedsabil83\\LaravelHijrian\\Tests\\": "tests"
         }
     },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
     "extra": {
         "laravel": {
             "providers": [
                 "Mohamedsabil83\\LaravelHijrian\\LaravelHijrianServiceProvider"
             ],
             "aliases": {
-                "LaravelHijrian": "Mohamedsabil83\\LaravelHijrian\\Facades\\LaravelHijrian"
+                "Hijrian": "Mohamedsabil83\\LaravelHijrian\\LaravelHijrianFacade"
             }
         }
     }

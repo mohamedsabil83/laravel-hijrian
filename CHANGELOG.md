@@ -1,8 +1,7 @@
 # Changelog
 
-All notable changes to `LaravelHijrian` will be documented in this file.
+All notable changes to `laravel-hijrian` will be documented in this file
 
-## Version 1.0
+## v1.0.0 - 2019-06-16
 
-### Added
-- Everything
+- initial release

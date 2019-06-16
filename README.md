@@ -1,57 +1,73 @@
-# LaravelHijrian
+# Laravel Hijrian
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mohamedsabil83/laravel-hijrian.svg?style=flat-square)](https://packagist.org/packages/mohamedsabil83/laravel-hijrian)
+[![Build Status](https://img.shields.io/travis/mohamedsabil83/laravel-hijrian/master.svg?style=flat-square)](https://travis-ci.org/mohamedsabil83/laravel-hijrian)
+[![Quality Score](https://img.shields.io/scrutinizer/g/mohamedsabil83/laravel-hijrian.svg?style=flat-square)](https://scrutinizer-ci.com/g/mohamedsabil83/laravel-hijrian)
+[![Total Downloads](https://img.shields.io/packagist/dt/mohamedsabil83/laravel-hijrian.svg?style=flat-square)](https://packagist.org/packages/mohamedsabil83/laravel-hijrian)
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+This is a Hijri-Gregory date converter. It's return a date instance of **carbon**, so, you can make any process related to it.
 
 ## Installation
 
-Via Composer
+You can install the package via composer:
 
-``` bash
-$ composer require mohamedsabil83/laravelhijrian
+```bash
+composer require mohamedsabil83/laravel-hijrian
 ```
 
 ## Usage
 
-## Change log
+### Get Hijri date
 
-Please see the [changelog](changelog.md) for more information on what has changed recently.
+```php
+Hijrian::hijri()
+```
 
-## Testing
+### Get Gregory date
+
+```php
+Hijrian::gregory()
+```
+
+### Convert to Hijri
+
+```php
+Hijrian::hijri($gregory_date)
+```
+
+### Convert to Gregory
+
+```php
+Hijrian::gregory($hijri_date)
+```
+
+<!-- ### Testing
 
 ``` bash
-$ composer test
-```
+composer test
+``` -->
+
+### Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## Contributing
 
-Please see [contributing.md](contributing.md) for details and a todolist.
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-## Security
+### Security
 
 If you discover any security related issues, please email me@mohamedsabil83.com instead of using the issue tracker.
 
 ## Credits
 
-- [Mohamed Sabil][link-author]
-- [All Contributors][link-contributors]
+- [Mohamed Sabil](https://github.com/mohamedsabil83)
+- [All Contributors](../../contributors)
 
 ## License
 
-MIT. Please see the [license file](license.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/mohamedsabil83/laravelhijrian.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/mohamedsabil83/laravelhijrian.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/mohamedsabil83/laravelhijrian/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/12345678/shield
+## Laravel Package Boilerplate
 
-[link-packagist]: https://packagist.org/packages/mohamedsabil83/laravelhijrian
-[link-downloads]: https://packagist.org/packages/mohamedsabil83/laravelhijrian
-[link-travis]: https://travis-ci.org/mohamedsabil83/laravelhijrian
-[link-styleci]: https://styleci.io/repos/12345678
-[link-author]: https://github.com/mohamedsabil83
-[link-contributors]: ../../contributors
+This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
