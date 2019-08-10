@@ -134,8 +134,6 @@ trait HijrianTrait
         $d = floor(365.25 * $c);
         $month = floor(($b - $d) / 30.6001);
 
-        $c = $month > 13 ? ++$c : $c;
-
         // compute Modified Chronological Julian Day Number (MCJDN)
 
         $mcjdn = $cjdn - 2400000;
