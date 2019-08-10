@@ -24,7 +24,7 @@ class LaravelHijrian
     public static function hijri($date = null)
     {
         [$year, $month, $day] = explode('-', self::$date->parse($date)->format('Y-m-d'));
-        return self::gth($year, $month, $day);
+        return self::gth(+$year, +$month, +$day);
     }
 
     /**
@@ -40,6 +40,6 @@ class LaravelHijrian
         }
 
         [$year, $month, $day] = explode('-', self::$date->parse($date)->format('Y-m-d'));
-        return self::htg($year, $month, $day);
+        return self::htg(+$year, +$month, +$day);
     }
 }

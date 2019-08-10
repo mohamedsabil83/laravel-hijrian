@@ -133,12 +133,8 @@ trait HijrianTrait
         $c = floor(($b - 122.1) / 365.25);
         $d = floor(365.25 * $c);
         $month = floor(($b - $d) / 30.6001);
-        $day = ($b - $d) - floor(30.6001 * $month);
 
         $c = $month > 13 ? ++$c : $c;
-        $month = $month > 13 ? $month -= 12 : --$month;
-
-        $year = $c - 4716;
 
         // compute Modified Chronological Julian Day Number (MCJDN)
 
@@ -146,7 +142,8 @@ trait HijrianTrait
 
         // the MCJDN's of the start of the lunations in the Umm al-Qura calendar are stored in 'islamcalendar_dat.js'
 
-        for ($i = 0; $i < count(self::$UQD); $i++) {
+        $count = count(self::$UQD);
+        for ($i = 0; $i < $count; $i++) {
             if (self::$UQD[$i] > $mcjdn) {
                 break;
             }
@@ -159,7 +156,6 @@ trait HijrianTrait
         $iy = $ii + 1;
         $im = $iln - 12 * $ii;
         $id = $mcjdn - self::$UQD[$i - 1] + 1;
-        $ml = self::$UQD[$i] - self::$UQD[$i - 1];
 
         return self::$date->setYear($iy)->setMonth($im)->setDay($id);
     }
