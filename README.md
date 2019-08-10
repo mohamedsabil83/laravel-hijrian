@@ -43,11 +43,11 @@ Hijrian::hijri($gregory_date)
 Hijrian::gregory($hijri_date)
 ```
 
-<!-- ### Testing
+### Testing
 
 ``` bash
 composer test
-``` -->
+```
 
 ### Changelog
 
@@ -69,7 +69,3 @@ If you discover any security related issues, please email me@mohamedsabil83.com 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).

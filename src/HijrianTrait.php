@@ -115,10 +115,8 @@ trait HijrianTrait
         // append January and February to the previous year (i.e. regard March as
         // the first month of the year in order to simplify leapday corrections)
 
-        if ($m < 3) {
-            --$y;
-            $m += 12;
-        }
+        $y = $m < 3 ? --$y : $y;
+        $m = $m < 3 ? $m += 12 : $m;
 
         // determine offset between Julian and Gregorian calendar
 
@@ -137,12 +135,9 @@ trait HijrianTrait
         $month = floor(($b - $d) / 30.6001);
         $day = ($b - $d) - floor(30.6001 * $month);
 
-        if ($month > 13) {
-            ++$c;
-            $month -= 12;
-        }
+        $c = $month > 13 ? ++$c : $c;
+        $month = $month > 13 ? $month -= 12 : --$month;
 
-        --$month;
         $year = $c - 4716;
 
         // compute Modified Chronological Julian Day Number (MCJDN)
@@ -212,9 +207,7 @@ trait HijrianTrait
         $month = $e - ($e > 13.5 ? 13 : 1);
         $year = $c - ($month > 2.5 ? 4716 : 4715);
 
-        if ($year <= 0) {
-            $year--;
-        }
+        $year = $year <= 0 ? $year-- : $year;
 
         return self::$date->setYear($year)->setMonth($month)->setDay($day);
     }
