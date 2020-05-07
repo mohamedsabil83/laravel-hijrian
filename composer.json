@@ -2,13 +2,13 @@
     "name": "mohamedsabil83/laravel-hijrian",
     "description": "Hijri-Gregorian date converter for Laravel",
     "keywords": [
-        "laravel",
-        "hijrian",
-        "Hijri",
         "Gregorian",
         "Gregory",
+        "Hijri",
+        "converter",
         "date",
-        "converter"
+        "laravel",
+        "laravel-hijrian"
     ],
     "homepage": "https://github.com/mohamedsabil83/laravel-hijrian",
     "license": "MIT",
@@ -22,11 +22,11 @@
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "^5.0 || ^6.0",
+        "illuminate/support": "^5.8 || ^6.0 || ^7.0",
         "nesbot/carbon": "^2.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^3.8 || ^4.0",
+        "orchestra/testbench": "^3.8 || ^4.0 || ^5.0",
         "phpunit/phpunit": "^7.5 || ^8.0"
     },
     "autoload": {
@@ -42,6 +42,7 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
     },
     "config": {
         "sort-packages": true

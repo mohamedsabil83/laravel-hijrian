@@ -5,7 +5,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/mohamedsabil83/laravel-hijrian.svg?style=flat-square)](https://scrutinizer-ci.com/g/mohamedsabil83/laravel-hijrian)
 [![Total Downloads](https://img.shields.io/packagist/dt/mohamedsabil83/laravel-hijrian.svg?style=flat-square)](https://packagist.org/packages/mohamedsabil83/laravel-hijrian)
 
-This is a Hijri-Gregory date converter. It's return a date instance of **carbon**, so, you can make any process related to it.
+This is a Hijri-Gregory date converter for Laravel 5.8+. It's return a date instance of **carbon**, so, you can make any process related to it.
 
 ## Installation
 
@@ -45,7 +45,7 @@ Hijrian::gregory($hijri_date)
 
 ### Testing
 
-``` bash
+```bash
 composer test
 ```
 
