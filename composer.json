@@ -12,7 +12,6 @@
     ],
     "homepage": "https://github.com/mohamedsabil83/laravel-hijrian",
     "license": "MIT",
-    "type": "library",
     "authors": [
         {
             "name": "Mohamed Sabil",
@@ -21,13 +20,21 @@
         }
     ],
     "require": {
-        "php": "^7.1|^8.0",
-        "illuminate/support": "^5.8|^6.0|^7.0|^8.0",
-        "nesbot/carbon": "^2.0"
+        "php": "^7.4|^8.0",
+        "spatie/laravel-package-tools": "^1.9.2",
+        "illuminate/contracts": "^5.8|^6.0|^7.0|^8.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^3.8|^4.0|^5.0|^6.0",
-        "phpunit/phpunit": "^7.5|^8.0|^9.3"
+        "nunomaduro/collision": "^5.10",
+        "nunomaduro/larastan": "^1.0",
+        "orchestra/testbench": "^6.22",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.5",
+        "spatie/laravel-ray": "^1.26"
     },
     "autoload": {
         "psr-4": {
@@ -40,12 +47,16 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "pestphp/pest-plugin": true
+        }
     },
     "extra": {
         "laravel": {
@@ -53,8 +64,10 @@
                 "Mohamedsabil83\\LaravelHijrian\\LaravelHijrianServiceProvider"
             ],
             "aliases": {
-                "Hijrian": "Mohamedsabil83\\LaravelHijrian\\LaravelHijrianFacade"
+                "Hijrian": "Mohamedsabil83\\LaravelHijrian\\Facades\\LaravelHijrian"
             }
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

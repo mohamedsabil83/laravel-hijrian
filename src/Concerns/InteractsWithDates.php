@@ -1,8 +1,8 @@
 <?php
 
-namespace Mohamedsabil83\LaravelHijrian;
+namespace Mohamedsabil83\LaravelHijrian\Concerns;
 
-trait HijrianTrait
+trait InteractsWithDates
 {
     private static $UQD = [
         28607, 28636, 28665, 28695, 28724, 28754, 28783, 28813, 28843, 28872, 28901, 28931, 28960, 28990, 29019, 29049, 29078, 29108, 29137, 29167,
@@ -96,11 +96,12 @@ trait HijrianTrait
     ];
 
     /**
-     * Convert Gregorian to Hijri
+     * Convert Gregorian to Hijri.
      *
      * @param int $year
      * @param int $month
      * @param int $day
+     *
      * @return \Carbon\Carbon
      */
     private static function gth($year, $month, $day)
@@ -141,7 +142,7 @@ trait HijrianTrait
         // the MCJDN's of the start of the lunations in the Umm al-Qura calendar are stored in 'islamcalendar_dat.js'
 
         $count = count(self::$UQD);
-        for ($i = 0; $i < $count; $i++) {
+        for ($i = 0; $i < $count; ++$i) {
             if (self::$UQD[$i] > $mcjdn) {
                 break;
             }
@@ -159,11 +160,12 @@ trait HijrianTrait
     }
 
     /**
-     * Convert Hijri to Gregorian
+     * Convert Hijri to Gregorian.
      *
      * @param int $year
      * @param int $month
      * @param int $day
+     *
      * @return \Carbon\Carbon
      */
     private static function htg($year, $month, $day)
@@ -182,9 +184,10 @@ trait HijrianTrait
     }
 
     /**
-     * Convert Julian to Gregorian
+     * Convert Julian to Gregorian.
      *
      * @param int $date
+     *
      * @return \Carbon\Carbon
      * @source http://keith-wood.name/calendars.html
      */

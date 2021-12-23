@@ -2,27 +2,15 @@
 
 namespace Mohamedsabil83\LaravelHijrian;
 
-use Illuminate\Support\ServiceProvider;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class LaravelHijrianServiceProvider extends ServiceProvider
+class LaravelHijrianServiceProvider extends PackageServiceProvider
 {
-    /**
-     * Bootstrap the application services.
-     */
-    public function boot()
+    public function configurePackage(Package $package): void
     {
-        //
-    }
-
-    /**
-     * Register the application services.
-     */
-    public function register()
-    {
-        $this->app->singleton(LaravelHijrian::class, function () {
-            return new LaravelHijrian;
-        });
-
-        $this->app->alias(LaravelHijrian::class, 'hijrian');
+        $package
+            ->name('laravel-hijrian')
+        ;
     }
 }

@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `laravel-hijrian` will be documented in this file
+All notable changes to `laravel-hijrian` will be documented in this file.
 
 ## v2.0.0 - 2020-05-08
 
