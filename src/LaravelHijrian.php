@@ -3,10 +3,11 @@
 namespace Mohamedsabil83\LaravelHijrian;
 
 use Carbon\Carbon;
+use Mohamedsabil83\LaravelHijrian\Concerns\InteractsWithDates;
 
 class LaravelHijrian
 {
-    use HijrianTrait;
+    use InteractsWithDates;
 
     private static $date;
 
@@ -16,21 +17,24 @@ class LaravelHijrian
     }
 
     /**
-     * Return Hijri date
+     * Return Hijri date.
      *
      * @param string|null $date
+     *
      * @return \Carbon\Carbon
      */
     public static function hijri($date = null)
     {
         [$year, $month, $day] = explode('-', self::$date->parse($date)->format('Y-m-d'));
-        return self::gth(+$year, +$month, +$day);
+
+        return self::gth((int) $year, (int) $month, (int) $day);
     }
 
     /**
-     * Return Gregorian date
+     * Return Gregorian date.
      *
      * @param string|null $date
+     *
      * @return \Carbon\Carbon
      */
     public static function gregory($date = null)
@@ -40,6 +44,7 @@ class LaravelHijrian
         }
 
         [$year, $month, $day] = explode('-', self::$date->parse($date)->format('Y-m-d'));
-        return self::htg(+$year, +$month, +$day);
+
+        return self::htg((int) $year, (int) $month, (int) $day);
     }
 }
