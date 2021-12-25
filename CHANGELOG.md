@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-hijrian` will be documented in this file.
 
+## v3.0.0 - 2021-12-22
+
+- Refactor using spatie/laravel-package-tools
+
 ## v2.0.0 - 2020-05-08
 
 - Add Laravel 7.x compatibility.
