@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-hijrian` will be documented in this file.
 
+## Support Laravel 9 - 2022-02-08
+
+Support Laravel 9
+
+**Full Changelog**: https://github.com/mohamedsabil83/laravel-hijrian/compare/v3.0.0...v3.1.0
+
 ## v3.0.0 - 2021-12-22
 
 - Refactor using spatie/laravel-package-tools
