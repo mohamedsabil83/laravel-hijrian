@@ -159,6 +159,63 @@ trait InteractsWithDates
         return self::$date->setYear($iy)->setMonth($im)->setDay($id);
     }
 
+
+    private static function gth2($year, $month, $day,$hours,$minutes,$seconds)
+    {
+        $year = (int) $year;
+        $month = (int) $month - 1; // Month start with Zero
+        $day = (int) $day;
+
+        $y = $year;
+        $m = $month + 1;
+
+        // append January and February to the previous year (i.e. regard March as
+        // the first month of the year in order to simplify leapday corrections)
+
+        $y = $m < 3 ? --$y : $y;
+        $m = $m < 3 ? $m += 12 : $m;
+
+        // determine offset between Julian and Gregorian calendar
+
+        $a = floor($y / 100.);
+        $jgc = $a - floor($a / 4.) - 2;
+
+        // compute Chronological Julian Day Number (CJDN)
+
+        $cjdn = floor(365.25 * ($y + 4716)) + floor(30.6001 * ($m + 1)) + $day - $jgc - 1524;
+
+        $a = floor(($cjdn - 1867216.25) / 36524.25);
+        $jgc = $a - floor($a / 4.) + 1;
+        $b = $cjdn + $jgc + 1524;
+        $c = floor(($b - 122.1) / 365.25);
+        $d = floor(365.25 * $c);
+        $month = floor(($b - $d) / 30.6001);
+
+        // compute Modified Chronological Julian Day Number (MCJDN)
+
+        $mcjdn = $cjdn - 2400000;
+
+        // the MCJDN's of the start of the lunations in the Umm al-Qura calendar are stored in 'islamcalendar_dat.js'
+
+        $count = count(self::$UQD);
+        for ($i = 0; $i < $count; ++$i) {
+            if (self::$UQD[$i] > $mcjdn) {
+                break;
+            }
+        }
+
+        // compute and output the Umm al-Qura calendar date
+
+        $iln = $i + 16260;
+        $ii = floor(($iln - 1) / 12);
+        $iy = $ii + 1;
+        $im = $iln - 12 * $ii;
+        $id = $mcjdn - self::$UQD[$i - 1] + 1;
+
+        return self::$date->setYear($iy)->setMonth($im)->setDay($id)->setHours($hours)->setMinutes($minutes)->setSeconds($seconds);
+    }
+
+
     /**
      * Convert Hijri to Gregorian.
      *
@@ -181,6 +238,25 @@ trait InteractsWithDates
         $cjdn = $mcjdn + 2400000;
 
         return self::jtg($cjdn);
+    }
+
+    private static function htg2($year, $month, $day,$hours,$minutes,$seconds)
+    {
+        $year = (int) $year;
+        $month = (int) $month;
+        $day = (int) $day;
+        $hours = (int) $hours;
+        $minutes = (int) $minutes;
+        $seconds = (int) $seconds;
+        
+
+        $ii = $year - 1;
+        $iln = ($ii * 12) + 1 + ($month - 1);
+        $i = $iln - 16260;
+        $mcjdn = $day + self::$UQD[$i - 1] - 1;
+        $cjdn = $mcjdn + 2400000;
+
+        return self::jtg2($cjdn,$hours,$minutes,$seconds);
     }
 
     /**
@@ -207,5 +283,22 @@ trait InteractsWithDates
         $year = $year <= 0 ? $year-- : $year;
 
         return self::$date->setYear($year)->setMonth($month)->setDay($day);
+    }
+
+    private static function jtg2($date,$hours,$minutes,$seconds)
+    {
+        $z = floor($date + 0.5);
+        $a = floor(($z - 1867216.25) / 36524.25);
+        $a = $z + 1 + $a - floor($a / 4);
+        $b = $a + 1524;
+        $c = floor(($b - 122.1) / 365.25);
+        $d = floor(365.25 * $c);
+        $e = floor(($b - $d) / 30.6001);
+        $day = $b - $d - floor($e * 30.6001);
+        $month = $e - ($e > 13.5 ? 13 : 1);
+        $year = $c - ($month > 2.5 ? 4716 : 4715);
+
+        $year = $year <= 0 ? $year-- : $year;
+        return self::$date->setYear($year)->setMonth($month)->setDay($day)->setHours($hours)->setMinutes($minutes)->setSeconds($seconds);
     }
 }
