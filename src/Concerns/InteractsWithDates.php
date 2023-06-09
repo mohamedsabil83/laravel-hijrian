@@ -159,8 +159,7 @@ trait InteractsWithDates
         return self::$date->setYear($iy)->setMonth($im)->setDay($id);
     }
 
-
-    private static function gth2($year, $month, $day,$hours,$minutes,$seconds)
+    private static function gth2($year, $month, $day, $hours, $minutes, $seconds)
     {
         $year = (int) $year;
         $month = (int) $month - 1; // Month start with Zero
@@ -215,7 +214,6 @@ trait InteractsWithDates
         return self::$date->setYear($iy)->setMonth($im)->setDay($id)->setHours($hours)->setMinutes($minutes)->setSeconds($seconds);
     }
 
-
     /**
      * Convert Hijri to Gregorian.
      *
@@ -240,7 +238,7 @@ trait InteractsWithDates
         return self::jtg($cjdn);
     }
 
-    private static function htg2($year, $month, $day,$hours,$minutes,$seconds)
+    private static function htg2($year, $month, $day, $hours, $minutes, $seconds)
     {
         $year = (int) $year;
         $month = (int) $month;
@@ -248,7 +246,7 @@ trait InteractsWithDates
         $hours = (int) $hours;
         $minutes = (int) $minutes;
         $seconds = (int) $seconds;
-        
+
 
         $ii = $year - 1;
         $iln = ($ii * 12) + 1 + ($month - 1);
@@ -256,7 +254,7 @@ trait InteractsWithDates
         $mcjdn = $day + self::$UQD[$i - 1] - 1;
         $cjdn = $mcjdn + 2400000;
 
-        return self::jtg2($cjdn,$hours,$minutes,$seconds);
+        return self::jtg2($cjdn, $hours, $minutes, $seconds);
     }
 
     /**
@@ -285,7 +283,7 @@ trait InteractsWithDates
         return self::$date->setYear($year)->setMonth($month)->setDay($day);
     }
 
-    private static function jtg2($date,$hours,$minutes,$seconds)
+    private static function jtg2($date, $hours, $minutes, $seconds)
     {
         $z = floor($date + 0.5);
         $a = floor(($z - 1867216.25) / 36524.25);
@@ -299,6 +297,7 @@ trait InteractsWithDates
         $year = $c - ($month > 2.5 ? 4716 : 4715);
 
         $year = $year <= 0 ? $year-- : $year;
+
         return self::$date->setYear($year)->setMonth($month)->setDay($day)->setHours($hours)->setMinutes($minutes)->setSeconds($seconds);
     }
 }
