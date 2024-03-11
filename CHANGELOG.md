@@ -2,6 +2,16 @@
 
 All notable changes to `laravel-hijrian` will be documented in this file.
 
+## v4.1.0 - 2024-03-11
+
+### v4.1.0 - 2024-03-11
+
+#### What's Changed
+
+* Update namespace
+
+**Full Changelog**: https://github.com/mohamedsabil83/laravel-hijrian/compare/v4.0.0...v4.1.0
+
 ## v4.0.0 - 2024-03-11
 
 ### What's Changed
