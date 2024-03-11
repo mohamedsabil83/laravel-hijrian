@@ -1,6 +1,6 @@
 <?php
 
-namespace Mohamedsabil83\LaravelHijrian;
+namespace MohamedSabil83\LaravelHijrian;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

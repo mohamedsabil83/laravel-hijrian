@@ -1,8 +1,8 @@
 <?php
 
-namespace Mohamedsabil83\LaravelHijrian\Tests;
+namespace MohamedSabil83\LaravelHijrian\Tests;
 
-use Mohamedsabil83\LaravelHijrian\LaravelHijrianServiceProvider;
+use MohamedSabil83\LaravelHijrian\LaravelHijrianServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra

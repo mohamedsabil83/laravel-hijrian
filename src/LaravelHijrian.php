@@ -1,9 +1,9 @@
 <?php
 
-namespace Mohamedsabil83\LaravelHijrian;
+namespace MohamedSabil83\LaravelHijrian;
 
 use Carbon\Carbon;
-use Mohamedsabil83\LaravelHijrian\Concerns\InteractsWithDates;
+use MohamedSabil83\LaravelHijrian\Concerns\InteractsWithDates;
 
 class LaravelHijrian
 {

@@ -1,7 +1,7 @@
 <?php
 
 use Carbon\Carbon;
-use Mohamedsabil83\LaravelHijrian\Facades\Hijrian;
+use MohamedSabil83\LaravelHijrian\Facades\Hijrian;
 
 beforeEach(function () {
     $this->gregory = '2019-08-09';

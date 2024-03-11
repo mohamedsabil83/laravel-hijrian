@@ -1,6 +1,6 @@
 <?php
 
-namespace Mohamedsabil83\LaravelHijrian\Concerns;
+namespace MohamedSabil83\LaravelHijrian\Concerns;
 
 trait InteractsWithDates
 {

@@ -39,12 +39,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Mohamedsabil83\\LaravelHijrian\\": "src"
+            "MohamedSabil83\\LaravelHijrian\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mohamedsabil83\\LaravelHijrian\\Tests\\": "tests"
+            "MohamedSabil83\\LaravelHijrian\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -75,7 +75,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mohamedsabil83\\LaravelHijrian\\LaravelHijrianServiceProvider"
+                "MohamedSabil83\\LaravelHijrian\\LaravelHijrianServiceProvider"
             ]
         }
     },

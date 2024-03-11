@@ -1,12 +1,12 @@
 <?php
 
-namespace Mohamedsabil83\LaravelHijrian\Facades;
+namespace MohamedSabil83\LaravelHijrian\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Mohamedsabil83\LaravelHijrian\LaravelHijrian;
+use MohamedSabil83\LaravelHijrian\LaravelHijrian;
 
 /**
- * @see \Mohamedsabil83\LaravelHijrian\LaravelHijrian
+ * @see \MohamedSabil83\LaravelHijrian\LaravelHijrian
  */
 class Hijrian extends Facade
 {
