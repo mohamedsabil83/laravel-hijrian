@@ -3,8 +3,8 @@
 <img src="https://preview.dragon-code.pro/mohamedsabil83/Laravel-Hijrian.svg?brand=laravel" alt="MohamedSabil83"/>
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mohamedsabil83/laravel-hijrian.svg?style=flat-square)](https://packagist.org/packages/mohamedsabil83/laravel-hijrian)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/mohamedsabil83/laravel-hijrian/run-tests?label=tests)](https://github.com/mohamedsabil83/laravel-hijrian/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/mohamedsabil83/laravel-hijrian/Check%20&%20fix%20styling?label=code%20style)](https://github.com/mohamedsabil83/laravel-hijrian/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/mohamedsabil83/laravel-hijrian/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/mohamedsabil83/laravel-hijrian/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/mohamedsabil83/laravel-hijrian/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/mohamedsabil83/laravel-hijrian/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/mohamedsabil83/laravel-hijrian.svg?style=flat-square)](https://packagist.org/packages/mohamedsabil83/laravel-hijrian)
 
 This is a Hijri-Gregory date converter for Laravel 5.8+. It's return a date instance of **carbon**, so, you can make any process related to it.
@@ -57,7 +57,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Contributing
 
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 

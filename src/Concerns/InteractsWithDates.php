@@ -98,10 +98,9 @@ trait InteractsWithDates
     /**
      * Convert Gregorian to Hijri.
      *
-     * @param int $year
-     * @param int $month
-     * @param int $day
-     *
+     * @param  int  $year
+     * @param  int  $month
+     * @param  int  $day
      * @return \Carbon\Carbon
      */
     private static function gth($year, $month, $day)
@@ -142,7 +141,7 @@ trait InteractsWithDates
         // the MCJDN's of the start of the lunations in the Umm al-Qura calendar are stored in 'islamcalendar_dat.js'
 
         $count = count(self::$UQD);
-        for ($i = 0; $i < $count; ++$i) {
+        for ($i = 0; $i < $count; $i++) {
             if (self::$UQD[$i] > $mcjdn) {
                 break;
             }
@@ -197,7 +196,7 @@ trait InteractsWithDates
         // the MCJDN's of the start of the lunations in the Umm al-Qura calendar are stored in 'islamcalendar_dat.js'
 
         $count = count(self::$UQD);
-        for ($i = 0; $i < $count; ++$i) {
+        for ($i = 0; $i < $count; $i++) {
             if (self::$UQD[$i] > $mcjdn) {
                 break;
             }
@@ -217,10 +216,9 @@ trait InteractsWithDates
     /**
      * Convert Hijri to Gregorian.
      *
-     * @param int $year
-     * @param int $month
-     * @param int $day
-     *
+     * @param  int  $year
+     * @param  int  $month
+     * @param  int  $day
      * @return \Carbon\Carbon
      */
     private static function htg($year, $month, $day)
@@ -247,7 +245,6 @@ trait InteractsWithDates
         $minutes = (int) $minutes;
         $seconds = (int) $seconds;
 
-
         $ii = $year - 1;
         $iln = ($ii * 12) + 1 + ($month - 1);
         $i = $iln - 16260;
@@ -260,9 +257,9 @@ trait InteractsWithDates
     /**
      * Convert Julian to Gregorian.
      *
-     * @param int $date
-     *
+     * @param  int  $date
      * @return \Carbon\Carbon
+     *
      * @source http://keith-wood.name/calendars.html
      */
     private static function jtg($date)

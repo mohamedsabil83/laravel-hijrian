@@ -19,8 +19,7 @@ class LaravelHijrian
     /**
      * Return Hijri date.
      *
-     * @param string|null $date
-     *
+     * @param  string|null  $date
      * @return \Carbon\Carbon
      */
     public static function hijri($date = null)
@@ -38,8 +37,7 @@ class LaravelHijrian
         // $time =  str_replace('AM','ص',$time);
         $date = date('Y-m-d', strtotime($date));
 
-
-        [$hours, $minutes ,$seconds ] = explode(':', $time);
+        [$hours, $minutes, $seconds] = explode(':', $time);
         [$year, $month, $day] = explode('-', self::$date->parse($date)->format('Y-m-d'));
 
         return self::gth2((int) $year, (int) $month, (int) $day, (int) $hours, (int) $minutes, (int) $seconds);
@@ -48,8 +46,7 @@ class LaravelHijrian
     /**
      * Return Gregorian date.
      *
-     * @param string|null $date
-     *
+     * @param  string|null  $date
      * @return \Carbon\Carbon
      */
     public static function gregory($date = null)
@@ -65,6 +62,9 @@ class LaravelHijrian
 
     public static function gregoryDateTime($date = null)
     {
+        if (empty($date)) {
+            return self::$date->now();
+        }
 
         // check Arabic Date And Replace AM & PM
         $date = str_replace('م', 'PM', $date);
@@ -73,11 +73,7 @@ class LaravelHijrian
         $time = date('G:i:s', strtotime($date));
         $date = date('Y-m-d', strtotime($date));
 
-        if (empty($date)) {
-            return self::$date->now();
-        }
-
-        [$hours, $minutes ,$seconds ] = explode(':', $time);
+        [$hours, $minutes, $seconds] = explode(':', $time);
         [$year, $month, $day] = explode('-', self::$date->parse($date)->format('Y-m-d'));
 
         return self::htg2((int) $year, (int) $month, (int) $day, (int) $hours, (int) $minutes, (int) $seconds);

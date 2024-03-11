@@ -10,7 +10,6 @@ class LaravelHijrianServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('laravel-hijrian')
-        ;
+            ->name('laravel-hijrian');
     }
 }
