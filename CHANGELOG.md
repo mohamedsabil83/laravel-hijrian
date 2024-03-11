@@ -2,6 +2,20 @@
 
 All notable changes to `laravel-hijrian` will be documented in this file.
 
+## v4.0.0 - 2024-03-11
+
+### What's Changed
+
+* Support Laravel 10.x
+* Drop supporting Laravel < 10.x
+* Drop supporting PHP < 8.1
+* Bump dependabot/fetch-metadata from 1.5.1 to 1.6.0 by @dependabot in https://github.com/mohamedsabil83/laravel-hijrian/pull/16
+* Bump actions/checkout from 3 to 4 by @dependabot in https://github.com/mohamedsabil83/laravel-hijrian/pull/17
+* Bump stefanzweifel/git-auto-commit-action from 4 to 5 by @dependabot in https://github.com/mohamedsabil83/laravel-hijrian/pull/18
+* Bump ramsey/composer-install from 2 to 3 by @dependabot in https://github.com/mohamedsabil83/laravel-hijrian/pull/19
+
+**Full Changelog**: https://github.com/mohamedsabil83/laravel-hijrian/compare/v3.2.0...v4.0.0
+
 ## v3.2.0 - 2023-06-09
 
 ### What's Changed
