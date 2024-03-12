@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-hijrian` will be documented in this file.
 
+## v4.2.0 - 2024-03-12
+
+### What's Changed
+
+* Support Laravel 11.x
+
+**Full Changelog**: https://github.com/mohamedsabil83/laravel-hijrian/compare/v4.1.0...v4.2.0
+
 ## v4.1.0 - 2024-03-11
 
 ### v4.1.0 - 2024-03-11
