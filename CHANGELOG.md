@@ -2,6 +2,27 @@
 
 All notable changes to `laravel-hijrian` will be documented in this file.
 
+## v4.3.0 - 2026-03-21
+
+### What's Changed
+
+* Support Laravel 12 & 13.
+* Update orchestra/testbench requirement from 8.0|^9.0 to ^8.22.1 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/21
+* Bump aglipanci/laravel-pint-action from 2.3.1 to 2.4 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/22
+* Bump dependabot/fetch-metadata from 1.6.0 to 2.1.0 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/23
+* Bump dependabot/fetch-metadata from 2.1.0 to 2.2.0 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/24
+* Update orchestra/testbench requirement from ^8.22.1 to ^9.5.2 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/30
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/31
+* Bump aglipanci/laravel-pint-action from 2.4 to 2.5 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/32
+* Bump dependabot/fetch-metadata from 2.3.0 to 2.4.0 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/33
+* Bump aglipanci/laravel-pint-action from 2.5 to 2.6 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/35
+* Bump stefanzweifel/git-auto-commit-action from 5 to 7 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/37
+* Bump actions/checkout from 4 to 6 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/38
+* Bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/39
+* Bump ramsey/composer-install from 3 to 4 by @dependabot[bot] in https://github.com/mohamedsabil83/laravel-hijrian/pull/40
+
+**Full Changelog**: https://github.com/mohamedsabil83/laravel-hijrian/compare/v4.2.0...v4.3.0
+
 ## v4.2.0 - 2024-03-12
 
 ### What's Changed
